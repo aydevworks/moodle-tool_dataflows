@@ -140,6 +140,7 @@ $string['step_name_connector_directory_file_count'] = 'Directory file count';
 $string['step_name_connector_directory_file_list'] = 'Directory file list';
 $string['step_name_connector_sftp_directory_file_list'] = 'SFTP directory file list';
 $string['step_name_connector_abort'] = 'Abort connector';
+$string['step_name_connector_adl'] = 'ADL file copy';
 $string['step_name_connector_append_file'] = 'Append file';
 $string['step_name_connector_compression'] = 'Compression/Decompression';
 $string['step_name_connector_copy_file'] = 'Copy File';
@@ -422,6 +423,17 @@ $string['flow_hash_file:path'] = 'Path to file';
 $string['flow_hash_file:algorithm'] = 'Algorithm';
 $string['flow_hash_file:algorithm_help'] = 'Name of selected hashing algorithm. Available algorithms include: {$a}';
 $string['flow_hash_file:algorithm_does_not_exist'] = 'Name of selected hashing algorithm. Available algorithms include: {$a}';
+
+// Azure Data Lake File Copy.
+$string['connector_adl:accesskey'] = 'Access key';
+$string['connector_adl:accountname'] = 'Storage account name';
+$string['connector_adl:missing_adl_source_or_target'] = 'At least one source or target path must reference a location in ADL.';
+$string['connector_adl:source'] = 'Source';
+$string['connector_adl:source_help'] = 'Path to the source file. This can be a local file or ADL blob path e.g.';
+$string['connector_adl:path_example'] = 'adl://mycontainer/myblob # Use adl:// to indicate it is an ADL path;';
+$string['connector_adl:source_is_a_directory'] = 'The source path is a directory but a file path is expected.';
+$string['connector_adl:target'] = 'Target';
+$string['connector_adl:target_help'] = 'Path to the target file. This can be a local file or ADL blob path e.g.';
 
 // S3 File Copy.
 $string['connector_s3:bucket'] = 'Bucket';
