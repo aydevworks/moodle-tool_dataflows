@@ -30,6 +30,16 @@ require_once(dirname(__FILE__) . '/vendor/autoload.php');
 use tool_dataflows\local\formats\encoders;
 use tool_dataflows\local\step;
 
+// Show where Psr\Log\LoggerInterface is loaded from.
+if (defined('PHPUNIT_TEST') && PHPUNIT_TEST) {
+    try {
+        $file = (new ReflectionClass(\Psr\Log\LoggerInterface::class))->getFileName();
+        echo "\nPSR LoggerInterface loaded from: $file\n";
+    } catch (Throwable $e) {
+        echo "\nCould not resolve Psr\Log\LoggerInterface: " . $e->getMessage() . "\n";
+    }
+}
+
 /**
  * Returns a list of step types available for this plugin.
  *
